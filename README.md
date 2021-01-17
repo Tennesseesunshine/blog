@@ -1,1 +1,1 @@
-#### 有趣的东西在`Issues`
+#### `Issues`的内容已经迁移至博客 https://tennesseesunshine.github.io/
