@@ -1,2 +1,4 @@
 # blog
-vuepress 搭建的个人笔记和文档库
+vuepress 迁移个人笔记
+
+新地址：https://tennesseesunshine.github.io/blog/
