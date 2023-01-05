@@ -2,4 +2,4 @@
 
 export NODE_OPTIONS=--openssl-legacy-provider
 
-npm run dev
+npm run docs:dev

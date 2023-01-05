@@ -6,7 +6,7 @@ set -e
 export NODE_OPTIONS=--openssl-legacy-provider
 
 # 生成静态文件
-npm run build
+npm run docs:build
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
@@ -16,6 +16,6 @@ git add -A
 git commit -m 'update blog'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:Tennesseesunshine/blog.git master:gh-pages
+git push -f git@github.com:Tennesseesunshine/blog.git main:gh-pages
 
 cd -
