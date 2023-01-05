@@ -7,6 +7,7 @@
     "doc": "docs"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "vuepress": "^1.9.7",
     "vuepress-plugin-smooth-scroll": "^0.0.10"
   },

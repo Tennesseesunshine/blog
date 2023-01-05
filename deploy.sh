@@ -15,7 +15,6 @@ git init
 git add -A
 git commit -m 'update blog'
 
-# 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:Tennesseesunshine/blog.git main:gh-pages
-
 cd -
+
+node ./publish.js
