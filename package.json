@@ -1,0 +1,29 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "vuepress 搭建的个人笔记和文档库",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "vuepress": "^1.9.7",
+    "vuepress-plugin-smooth-scroll": "^0.0.10"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "dev:server": "sh ./dev.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tennesseesunshine/blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tennesseesunshine/blog/issues"
+  },
+  "homepage": "https://github.com/Tennesseesunshine/blog#readme"
+}
