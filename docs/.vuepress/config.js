@@ -36,6 +36,10 @@ module.exports = {
                         link: '/notes/react/'
                     },
                     {
+                        text: 'Javascript',
+                        link: '/notes/javascript/promise-resolve-and-return'
+                    },
+                    {
                         text: '网络',
                         link: '/notes/network/'
                     },
@@ -73,6 +77,10 @@ module.exports = {
                 'generic-commands',
             ],
             '/notes/node/': [],
+            '/notes/javascript/': [
+                'promise-resolve-and-return',
+                'read-mini-reg-exp-book'
+            ],
             '/tools/github/': [
                 'github-actions'
             ],
