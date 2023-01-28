@@ -210,6 +210,23 @@ fi
 tail -f filename
 ```
 
+## 截取字符串
+
+假如我们需要截取一个字符串，可以利用 `${变量: start: end}` 来进行
+
+```sh
+# 获取当前系统node的主要版本号
+
+NODE_VERSION="$(node -v)"
+# 这样获取的是v18.12.1，但是我们只需要18，所以
+
+MAIN_VERSION=${NODE_VERSION: 1: 2}
+
+echo "$MAIN_VERSION"
+
+# 就能得到需要的版本号18
+```
+
 ## 以 js 写 shell 脚本的 zx
 
 - 它是一个 js 脚本不是 shell，文件以 .mjs 结尾

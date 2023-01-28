@@ -29,11 +29,11 @@ module.exports = {
                     },
                     {
                         text: 'Vue',
-                        link: '/notes/vue/'
+                        link: '/notes/vue/concis-event-bus'
                     },
                     {
                         text: 'React',
-                        link: '/notes/react/'
+                        link: '/notes/react/call-child-component-method'
                     },
                     {
                         text: 'Javascript',
@@ -45,7 +45,7 @@ module.exports = {
                     },
                     {
                         text: '浏览器相关',
-                        link: '/notes/browser/'
+                        link: '/notes/browser/anchor-setting'
                     },
                 ]
             },
@@ -77,6 +77,16 @@ module.exports = {
                 'generic-commands',
             ],
             '/notes/node/': [],
+            '/notes/vue/': [
+                'concis-event-bus'
+            ],
+            '/notes/react/': [
+                'call-child-component-method'
+            ],
+            '/notes/browser/': [
+                'anchor-setting',
+                'browser-download'
+            ],
             '/notes/javascript/': [
                 'promise-resolve-and-return',
                 'read-mini-reg-exp-book'
