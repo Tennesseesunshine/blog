@@ -50,6 +50,19 @@ module.exports = {
                 ]
             },
             {
+                text: "工程效率、设计方案",
+                items: [
+                    {
+                        text: '离线包',
+                        link: '/design/offline/'
+                    },
+                    {
+                        text: 'DevOps',
+                        link: '/design/devops/'
+                    },
+                ]
+            },
+            {
                 text: "工具使用",
                 items: [
                     {
