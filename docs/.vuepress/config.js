@@ -76,6 +76,10 @@ module.exports = {
                     {
                         text: 'github',
                         link: '/tools/github/github-actions'
+                    },
+                    {
+                        text: 'webpack',
+                        link: '/tools/webpack/md-to-html-loader'
                     }
                 ]
             },
@@ -88,6 +92,7 @@ module.exports = {
             '/notes/linux/': [
                 'shell-export-var-to-nodejs',
                 'generic-commands',
+                'git-commands'
             ],
             '/notes/node/': [],
             '/notes/vue/': [
@@ -102,10 +107,15 @@ module.exports = {
             ],
             '/notes/javascript/': [
                 'promise-resolve-and-return',
-                'read-mini-reg-exp-book'
+                'read-mini-reg-exp-book',
+                'reduce'
             ],
             '/tools/github/': [
                 'github-actions'
+            ],
+            '/tools/webpack/': [
+                'md-to-html-loader',
+                'md-to-html-loader-optimization'
             ],
         }
     }
