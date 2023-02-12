@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>子网如何划分 | 某喵喵</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="简单记录、学习笔记">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.144fa934.css" as="style"><link rel="preload" href="/blog/assets/js/app.f8d55777.js" as="script"><link rel="preload" href="/blog/assets/js/2.9875f188.js" as="script"><link rel="preload" href="/blog/assets/js/31.55b2efaa.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.12a746c0.js"><link rel="prefetch" href="/blog/assets/js/11.e589b28a.js"><link rel="prefetch" href="/blog/assets/js/12.d7f69a0d.js"><link rel="prefetch" href="/blog/assets/js/13.78ef516b.js"><link rel="prefetch" href="/blog/assets/js/14.890c0bbf.js"><link rel="prefetch" href="/blog/assets/js/15.2ded1311.js"><link rel="prefetch" href="/blog/assets/js/16.76fb416d.js"><link rel="prefetch" href="/blog/assets/js/17.9b70c6a6.js"><link rel="prefetch" href="/blog/assets/js/18.eac3edd8.js"><link rel="prefetch" href="/blog/assets/js/19.15ea688e.js"><link rel="prefetch" href="/blog/assets/js/20.f4f2564b.js"><link rel="prefetch" href="/blog/assets/js/21.c8cf4362.js"><link rel="prefetch" href="/blog/assets/js/22.56e6986d.js"><link rel="prefetch" href="/blog/assets/js/23.a5565786.js"><link rel="prefetch" href="/blog/assets/js/24.ef7d6995.js"><link rel="prefetch" href="/blog/assets/js/25.a9c02ac5.js"><link rel="prefetch" href="/blog/assets/js/26.77995ffd.js"><link rel="prefetch" href="/blog/assets/js/27.0373c9dc.js"><link rel="prefetch" href="/blog/assets/js/28.186384fd.js"><link rel="prefetch" href="/blog/assets/js/29.fb7b2b82.js"><link rel="prefetch" href="/blog/assets/js/3.446fcee1.js"><link rel="prefetch" href="/blog/assets/js/30.65274b10.js"><link rel="prefetch" href="/blog/assets/js/32.977599e7.js"><link rel="prefetch" href="/blog/assets/js/33.2ba845ff.js"><link rel="prefetch" href="/blog/assets/js/34.4e23bcaf.js"><link rel="prefetch" href="/blog/assets/js/35.b4dbff7c.js"><link rel="prefetch" href="/blog/assets/js/36.892623ef.js"><link rel="prefetch" href="/blog/assets/js/37.20db8c90.js"><link rel="prefetch" href="/blog/assets/js/38.f65dc72f.js"><link rel="prefetch" href="/blog/assets/js/39.95de0fa6.js"><link rel="prefetch" href="/blog/assets/js/4.48c34b70.js"><link rel="prefetch" href="/blog/assets/js/40.72a20d87.js"><link rel="prefetch" href="/blog/assets/js/41.68381aaa.js"><link rel="prefetch" href="/blog/assets/js/42.d4e1858e.js"><link rel="prefetch" href="/blog/assets/js/43.7380438e.js"><link rel="prefetch" href="/blog/assets/js/44.3344524d.js"><link rel="prefetch" href="/blog/assets/js/45.68e0ee32.js"><link rel="prefetch" href="/blog/assets/js/46.8f702e0b.js"><link rel="prefetch" href="/blog/assets/js/47.988df742.js"><link rel="prefetch" href="/blog/assets/js/5.b6391433.js"><link rel="prefetch" href="/blog/assets/js/6.66f56766.js"><link rel="prefetch" href="/blog/assets/js/7.b9c34bfd.js"><link rel="prefetch" href="/blog/assets/js/8.47ce4284.js"><link rel="prefetch" href="/blog/assets/js/9.c9ac39cc.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.144fa934.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/assets/images/icon.jpeg" alt="某喵喵" class="logo"> <span class="site-name can-hide">某喵喵</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/notes/linux/shell-export-var-to-nodejs.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/vue/concis-event-bus.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/react/call-child-component-method.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/javascript/promise-resolve-and-return.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/network/" class="nav-link router-link-active">
+  网络
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/browser/anchor-setting.html" class="nav-link">
+  浏览器相关
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程效率、设计方案" class="dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="工程效率、设计方案" class="mobile-dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/design/offline/" class="nav-link">
+  离线包
+</a></li><li class="dropdown-item"><!----> <a href="/blog/design/devops/gitlab-ci.html" class="nav-link">
+  DevOps
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具使用" class="dropdown-title"><span class="title">工具使用</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具使用" class="mobile-dropdown-title"><span class="title">工具使用</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/charles/" class="nav-link">
+  charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/github/github-actions.html" class="nav-link">
+  github
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/webpack/md-to-html-loader.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Tennesseesunshine" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/notes/linux/shell-export-var-to-nodejs.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/vue/concis-event-bus.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/react/call-child-component-method.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/javascript/promise-resolve-and-return.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/network/" class="nav-link router-link-active">
+  网络
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/browser/anchor-setting.html" class="nav-link">
+  浏览器相关
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程效率、设计方案" class="dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="工程效率、设计方案" class="mobile-dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/design/offline/" class="nav-link">
+  离线包
+</a></li><li class="dropdown-item"><!----> <a href="/blog/design/devops/gitlab-ci.html" class="nav-link">
+  DevOps
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具使用" class="dropdown-title"><span class="title">工具使用</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具使用" class="mobile-dropdown-title"><span class="title">工具使用</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/charles/" class="nav-link">
+  charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/github/github-actions.html" class="nav-link">
+  github
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/webpack/md-to-html-loader.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Tennesseesunshine" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>子网划分</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/notes/network/" aria-current="page" class="sidebar-link">IPv4</a></li><li><a href="/blog/notes/network/sub-network.html" aria-current="page" class="active sidebar-link">子网如何划分</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/notes/network/sub-network.html#子网掩码" class="sidebar-link">子网掩码</a></li><li class="sidebar-sub-header"><a href="/blog/notes/network/sub-network.html#具体如何计算和划分子网" class="sidebar-link">具体如何计算和划分子网？</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/notes/network/sub-network.html#子网网段" class="sidebar-link">子网网段</a></li><li class="sidebar-sub-header"><a href="/blog/notes/network/sub-network.html#子网掩码计算" class="sidebar-link">子网掩码计算</a></li></ul></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="子网如何划分"><a href="#子网如何划分" class="header-anchor">#</a> 子网如何划分</h1> <p>子网的划分目的是为了让网络变的更灵活，IP 地址利用率更高。</p> <h2 id="子网掩码"><a href="#子网掩码" class="header-anchor">#</a> 子网掩码</h2> <p>虽然给了 IP 地址，但是我们不知道当前这个 IP 哪些是网络号，哪些是主机号，所以作区分，诞生了子网掩码。子网掩码是可以计算出来当前 IP 哪些是网络号哪些是主机号。</p> <p>首先上边说了 IP 地址的类别中 ABC 其中这三类对应的默认子网掩码分别是：</p> <p>A：255.0.0.0</p> <p>B：255.255.0.0</p> <p>C：255.255.255.0</p> <p>没进行子网划分前的子网掩码，格式为：<code>网络号+主机号</code>。</p> <p>子网划分之后的话子网掩码格式为：<code>网络号+子网号+子网主机号</code>（子网是在主机号的基础上再划分子网号和子网主机号）。</p> <p>在计算的时候，子网掩码会和 IP 地址进行<code>与运算</code>得到一个对应的网络地址的位数。</p> <h2 id="具体如何计算和划分子网"><a href="#具体如何计算和划分子网" class="header-anchor">#</a> 具体如何计算和划分子网？</h2> <p>假设我们继续用 192.168.212.155 这个 IP，我们看到这个 IP 就知道他是一个 C 类 IP 地址，那么他的默认子网掩码是 255.255.255.0。我们如何对这个地址进行子网划分呢？</p> <p>首先我们拿到这个 IP 之后，它的前三位都是网络号，那我们在它的最后一位 155 这个主机号再做一个网络号和主机号的划分，在 C 类的默认划分下的主机号一个字节对应的 8 位。</p> <table><thead><tr><th>子网网络号</th> <th>0</th> <th>0</th> <th>0</th> <th>0</th> <th>0</th> <th>0</th> <th>0</th></tr></thead> <tbody><tr><td>128</td> <td>64</td> <td>32</td> <td>16</td> <td>8</td> <td>4</td> <td>2</td> <td>1</td></tr></tbody></table> <p>如果我们把它的主机号的 8 位的最高位拿出来作为子网号，也就是 128，那剩下的 7 位就是主机号，最高位的子网号可能是 0 或者 1，也就是说最高位的 0 或者 1 都对应了 1+2+4+8+16+32+64=128 个主机。所以单个网络下会有 128 个主机，两个网络下就是 128+128 个主机。所以可以看到针对子网进行划分，IP 的数量可以精确控制。</p> <p>那如果最后一个主机字节的前两位划分为网络号，也就是这样</p> <table><thead><tr><th>子网网络号</th> <th>子网网络号</th> <th>0</th> <th>0</th> <th>0</th> <th>0</th> <th>0</th> <th>0</th></tr></thead> <tbody><tr><td>128</td> <td>64</td> <td>32</td> <td>16</td> <td>8</td> <td>4</td> <td>2</td> <td>1</td></tr></tbody></table> <p>那这个划分规则对应的主机号就是 1+2+4+8+16+32 = 64 个，那前两位的 01 排列组合一共是 4 个网络号，每一个网络号对应的是 64 个主机，所以一共就是 <code>64*4</code> 个主机分别在 4 个不同的网络下。</p> <p>现在 C 类的默认的子网掩码是前三字节，也就是 24 位，加刚才我们举例的前 1 位或者前两位，那就是变成了 25 位 或者 26 位。</p> <p>首先针对 192.168.212.155 这个 IP，看需求需要划分几个网络，如果划分 2 个网络，那就是最后一个字节的 8 位的第一位为网络号，如果划分 4 位那就是前两位，因为是 00，01，10，11，剩下的就是主机号，以此类推。</p> <p>那用 1 位举例，就是会划分 2 个网络，0 对应的后面的主机号一共是 1+2+4+8+16+32+64=128，所以 一个网段就是 0 ～ 127，一个网段就是 128 ～ 255，所以现在的子网范围就是：192.168.212.0~192.168.212.127 和 192.168.212.128~192.168.212.255，每个网段允许连接 128 个 IP 地址。计算前两位方式一样的。只不过是主机号变成 64，网段变成了 0 ～ 63，64 ～ 127，128-191，192-255。</p> <h3 id="子网网段"><a href="#子网网段" class="header-anchor">#</a> 子网网段</h3> <p>那如果现在把 192.168.212.155 的主机号划分两个网络号，也就是上边说的第二种，那这样，原先的网络号的前两位都变成了子网网络号，这样</p> <table><thead><tr><th>子网网络号</th> <th>子网网络号</th> <th>0</th> <th>0</th> <th>0</th> <th>0</th> <th>0</th> <th>0</th></tr></thead> <tbody><tr><td>128</td> <td>64</td> <td>32</td> <td>16</td> <td>8</td> <td>4</td> <td>2</td> <td>1</td></tr></tbody></table> <p>那它的一个网络下可以用的 IP 数是 64 个，它的网段（同一个网段下是属于一个网络）分别是：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token number">192.168</span><span class="token number">.212</span><span class="token number">.0</span><span class="token operator">~</span><span class="token number">192.168</span><span class="token number">.212</span><span class="token number">.63</span>
+<span class="token number">192.168</span><span class="token number">.212</span><span class="token number">.64</span><span class="token operator">~</span><span class="token number">192.168</span><span class="token number">.212</span><span class="token number">.127</span>
+<span class="token number">192.168</span><span class="token number">.212</span><span class="token number">.128</span><span class="token operator">~</span><span class="token number">192.168</span><span class="token number">.212</span><span class="token number">.191</span>
+<span class="token number">192.168</span><span class="token number">.212</span><span class="token number">.192</span><span class="token operator">~</span><span class="token number">192.168</span><span class="token number">.212</span><span class="token number">.255</span>
+</code></pre></div><p>所以就得到了划分之后的子网网段。</p> <h3 id="子网掩码计算"><a href="#子网掩码计算" class="header-anchor">#</a> 子网掩码计算</h3> <p>关于子网掩码的计算，C 类默认子网掩码是 255.255.255.0 然后我们又针对 192.168.212 做了主机号的子网划分，之前默认的子网掩码位数是 24 位，现在加了主机号中的两位子网网络号也就是 24+2=26 位。
+所以子网的网络号是前两位 128+64=192，也就是说针对刚刚网段的子网掩码，最后变成了 255.255.255.192。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">2/12/2023, 7:42:22 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/notes/network/" class="prev router-link-active">
+        IPv4
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.f8d55777.js" defer></script><script src="/blog/assets/js/2.9875f188.js" defer></script><script src="/blog/assets/js/31.55b2efaa.js" defer></script>
+  </body>
+</html>

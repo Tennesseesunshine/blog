@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>node中间层文件上传 | 某喵喵</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="简单记录、学习笔记">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.144fa934.css" as="style"><link rel="preload" href="/blog/assets/js/app.f8d55777.js" as="script"><link rel="preload" href="/blog/assets/js/2.9875f188.js" as="script"><link rel="preload" href="/blog/assets/js/35.b4dbff7c.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.12a746c0.js"><link rel="prefetch" href="/blog/assets/js/11.e589b28a.js"><link rel="prefetch" href="/blog/assets/js/12.d7f69a0d.js"><link rel="prefetch" href="/blog/assets/js/13.78ef516b.js"><link rel="prefetch" href="/blog/assets/js/14.890c0bbf.js"><link rel="prefetch" href="/blog/assets/js/15.2ded1311.js"><link rel="prefetch" href="/blog/assets/js/16.76fb416d.js"><link rel="prefetch" href="/blog/assets/js/17.9b70c6a6.js"><link rel="prefetch" href="/blog/assets/js/18.eac3edd8.js"><link rel="prefetch" href="/blog/assets/js/19.15ea688e.js"><link rel="prefetch" href="/blog/assets/js/20.f4f2564b.js"><link rel="prefetch" href="/blog/assets/js/21.c8cf4362.js"><link rel="prefetch" href="/blog/assets/js/22.56e6986d.js"><link rel="prefetch" href="/blog/assets/js/23.a5565786.js"><link rel="prefetch" href="/blog/assets/js/24.ef7d6995.js"><link rel="prefetch" href="/blog/assets/js/25.a9c02ac5.js"><link rel="prefetch" href="/blog/assets/js/26.77995ffd.js"><link rel="prefetch" href="/blog/assets/js/27.0373c9dc.js"><link rel="prefetch" href="/blog/assets/js/28.186384fd.js"><link rel="prefetch" href="/blog/assets/js/29.fb7b2b82.js"><link rel="prefetch" href="/blog/assets/js/3.446fcee1.js"><link rel="prefetch" href="/blog/assets/js/30.65274b10.js"><link rel="prefetch" href="/blog/assets/js/31.55b2efaa.js"><link rel="prefetch" href="/blog/assets/js/32.977599e7.js"><link rel="prefetch" href="/blog/assets/js/33.2ba845ff.js"><link rel="prefetch" href="/blog/assets/js/34.4e23bcaf.js"><link rel="prefetch" href="/blog/assets/js/36.892623ef.js"><link rel="prefetch" href="/blog/assets/js/37.20db8c90.js"><link rel="prefetch" href="/blog/assets/js/38.f65dc72f.js"><link rel="prefetch" href="/blog/assets/js/39.95de0fa6.js"><link rel="prefetch" href="/blog/assets/js/4.48c34b70.js"><link rel="prefetch" href="/blog/assets/js/40.72a20d87.js"><link rel="prefetch" href="/blog/assets/js/41.68381aaa.js"><link rel="prefetch" href="/blog/assets/js/42.d4e1858e.js"><link rel="prefetch" href="/blog/assets/js/43.7380438e.js"><link rel="prefetch" href="/blog/assets/js/44.3344524d.js"><link rel="prefetch" href="/blog/assets/js/45.68e0ee32.js"><link rel="prefetch" href="/blog/assets/js/46.8f702e0b.js"><link rel="prefetch" href="/blog/assets/js/47.988df742.js"><link rel="prefetch" href="/blog/assets/js/5.b6391433.js"><link rel="prefetch" href="/blog/assets/js/6.66f56766.js"><link rel="prefetch" href="/blog/assets/js/7.b9c34bfd.js"><link rel="prefetch" href="/blog/assets/js/8.47ce4284.js"><link rel="prefetch" href="/blog/assets/js/9.c9ac39cc.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.144fa934.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/assets/images/icon.jpeg" alt="某喵喵" class="logo"> <span class="site-name can-hide">某喵喵</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/notes/linux/shell-export-var-to-nodejs.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/vue/concis-event-bus.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/react/call-child-component-method.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/javascript/promise-resolve-and-return.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/network/" class="nav-link">
+  网络
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/browser/anchor-setting.html" class="nav-link">
+  浏览器相关
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程效率、设计方案" class="dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="工程效率、设计方案" class="mobile-dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/design/offline/" class="nav-link">
+  离线包
+</a></li><li class="dropdown-item"><!----> <a href="/blog/design/devops/gitlab-ci.html" class="nav-link">
+  DevOps
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具使用" class="dropdown-title"><span class="title">工具使用</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具使用" class="mobile-dropdown-title"><span class="title">工具使用</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/charles/" class="nav-link">
+  charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/github/github-actions.html" class="nav-link">
+  github
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/webpack/md-to-html-loader.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Tennesseesunshine" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/notes/linux/shell-export-var-to-nodejs.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/vue/concis-event-bus.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/react/call-child-component-method.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/javascript/promise-resolve-and-return.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/network/" class="nav-link">
+  网络
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/browser/anchor-setting.html" class="nav-link">
+  浏览器相关
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程效率、设计方案" class="dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="工程效率、设计方案" class="mobile-dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/design/offline/" class="nav-link">
+  离线包
+</a></li><li class="dropdown-item"><!----> <a href="/blog/design/devops/gitlab-ci.html" class="nav-link">
+  DevOps
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具使用" class="dropdown-title"><span class="title">工具使用</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具使用" class="mobile-dropdown-title"><span class="title">工具使用</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/charles/" class="nav-link">
+  charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/github/github-actions.html" class="nav-link">
+  github
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/webpack/md-to-html-loader.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Tennesseesunshine" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/notes/react/call-child-component-method.html" class="sidebar-link">React Hook 父子通信</a></li><li><a href="/blog/notes/react/umi-use-iconfont.html" class="sidebar-link">umi 中使用 iconfont</a></li><li><a href="/blog/notes/react/upload-file.html" aria-current="page" class="active sidebar-link">node中间层文件上传</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/notes/react/upload-file.html#背景" class="sidebar-link">背景</a></li><li class="sidebar-sub-header"><a href="/blog/notes/react/upload-file.html#一些想法和对交互的调整" class="sidebar-link">一些想法和对交互的调整</a></li><li class="sidebar-sub-header"><a href="/blog/notes/react/upload-file.html#未使用-ant-design-上传组件的原因" class="sidebar-link">未使用 ant-design 上传组件的原因</a></li><li class="sidebar-sub-header"><a href="/blog/notes/react/upload-file.html#具体思路" class="sidebar-link">具体思路</a></li><li class="sidebar-sub-header"><a href="/blog/notes/react/upload-file.html#伪代码" class="sidebar-link">伪代码</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/notes/react/upload-file.html#前端" class="sidebar-link">前端</a></li><li class="sidebar-sub-header"><a href="/blog/notes/react/upload-file.html#node-层" class="sidebar-link">node 层</a></li></ul></li></ul></li><li><a href="/blog/notes/react/use-context.html" class="sidebar-link">跨深组件传递数据和调用方法</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="背景"><a href="#背景" class="header-anchor">#</a> 背景</h2> <p>公司项目的架构是 <code>umi</code> —&gt;  <code>nodejs</code> —&gt; <code>api</code></p> <p>在最近一次的需求中，有一个批量上传的功能，大体的交互是：在 <code>excel</code> 里先填写好数据，<code>web</code> 通过上传文件来在页面表格里预览，然后再将 <code>excel</code> 文件绑定一些表单的数据一起打包发送给后台，有点类似于表单中嵌套了文件上传，最后再提交表单。</p> <h2 id="一些想法和对交互的调整"><a href="#一些想法和对交互的调整" class="header-anchor">#</a> 一些想法和对交互的调整</h2> <p>最初的页面设计是放在步骤条里一共分为三步。上传在步骤条的第一步，表单在第二步，<code>ant-design</code> 的步骤条在切换上下步骤之后，上一个组件的 <code>dom</code> 会销毁，导致第二步无法获取到第一步在上传的时候生成的文件对象，也就无法上传文件。于是后来调整页面，将表单和上传文件放在一个页面，这样在解析文件成功之后，在当前这一步里就能一直获取到文件的对象，拿到文件对象就可以向接口发起请求。</p> <h2 id="未使用-ant-design-上传组件的原因"><a href="#未使用-ant-design-上传组件的原因" class="header-anchor">#</a> 未使用 <code>ant-design</code> 上传组件的原因</h2> <p><code>ant-design</code> 的 <code>Upload</code> 组件上传之后的文件对象会立马返回，但是前端无法将这个对象一直拿着在提交的时候再给接口，因为文件对象的一些 <code>key</code> 不能拷贝过去【也是这次才发现只有 <code>uid</code> 一个字段可以遍历】，而且在通过 <code>document.getElementById('file').files</code> 获取上传的文件对，其 <code>FileList</code> 是 <code>{length: 0}</code>，所以后来选择利用原生 <code>input</code> 来解决问题，通过创建 <code>ref</code> 将 <code>input</code> 的 <code>dom</code> 属性存起来，然后将 <code>ref</code> 获取的属性返回到父组件，在父组件里提交的时候，获取 <code>ref</code> 中的文件对象，传递给接口。</p> <h2 id="具体思路"><a href="#具体思路" class="header-anchor">#</a> 具体思路</h2> <ul><li>创建 <code>ref</code> 对象来存储 <code>input</code> <code>dom</code> 属性</li> <li>初始化利用 <code>addEventListener</code> 来监听原生 <code>input</code> 的 <code>change</code> 事件</li> <li>利用 <code>button</code> 覆盖默认的上传样式，点击 <code>button</code> 的时候模拟触发点击 <code>input</code> 上传</li> <li>捕获到事件之后，成功获取到文件对象，依次将文件对象传递给 <code>xlsx</code> 来解析为 <code>json</code> 数据，再将 <code>json</code> 数据传递给 <code>and-table</code> 来显示预览、将 <code>input</code> 的 <code>ref</code> 属性值回传到父组件（<code>handleFileInputRefs</code> 方法是父组件传递的 <code>props</code> 来获取自组件的 <code>input ref</code>）</li> <li>父组件中也已经接受了表单的数据，并且接受了 <code>input</code> 的属性，通过 <code>FormData</code> 将数据和文件混传给 <code>node</code> 的 <code>controller</code></li> <li><code>controller</code> 获取到文件对象和额外的表单参数，再向真正的接口发起请求</li></ul> <h2 id="伪代码"><a href="#伪代码" class="header-anchor">#</a> 伪代码</h2> <h3 id="前端"><a href="#前端" class="header-anchor">#</a> 前端</h3> <p>子组件 <code>parseExcel.tsx</code></p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">const</span> <span class="token constant">ONE_M_TO_BYTES</span><span class="token operator">:</span> number <span class="token operator">=</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">MAX_FILE_SIZE</span><span class="token operator">:</span> number <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 初始化定义ref来存储input dom对象，这个对象里的files对象可以一直获取到</span>
+<span class="token keyword">const</span> uploadInput <span class="token operator">=</span> <span class="token function">useRef</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * 获取column的对象key，数组转对象
+ * tableColumnKey 是父组件传递回来的table的json，类似
+ *
+ * [{
+ *    title: '关键词',
+ *    dataIndex: 'word',
+ *    key: 'word',
+ *  },
+ *  {
+ *    title: '豁免词',
+ *    dataIndex: 'exWord',
+ *    key: 'exWord',
+ *  }]
+ */</span>
+<span class="token keyword">const</span> <span class="token function-variable function">formatTitleOrFileld</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> entozh <span class="token operator">=</span> tableColumnKey<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      index<span class="token punctuation">,</span>
+      <span class="token literal-property property">key</span><span class="token operator">:</span> item<span class="token punctuation">.</span>key<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> entozh<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * 这个方法其实就是将数据转为表格可以用的json
+ */</span>
+<span class="token keyword">const</span> <span class="token function-variable function">handleImpotedJson</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>header<span class="token punctuation">,</span> <span class="token operator">...</span>tableBody<span class="token punctuation">]</span> <span class="token operator">=</span> jsonArr<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> keysArr <span class="token operator">=</span> <span class="token function">formatTitleOrFileld</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> len <span class="token operator">=</span> header<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+
+  <span class="token comment">// 稀疏数组补全empty项，因为excel中有的数据是空，解析出来的数据是索引不连续的，这一步的目的就是补全index</span>
+  tableBody<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">item</span><span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> len <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      item<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> item<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">/**
+   * 将解析的excel数据转换为ant-table支持渲染的数据格式
+   */</span>
+  <span class="token keyword">const</span> parsedExcelData <span class="token operator">=</span> tableBody<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">ele</span><span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> newitem <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    ele<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">im</span><span class="token operator">:</span> any<span class="token punctuation">,</span> <span class="token literal-property property">i</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> newKey <span class="token operator">=</span> keysArr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>key<span class="token punctuation">;</span>
+      newitem<span class="token punctuation">[</span>newKey<span class="token punctuation">]</span> <span class="token operator">=</span> im<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> newitem<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * 上传文件的方法，主要做一些文件大小的判断、文件的读取将excel的数据转换为json
+ * 这里有一个比较重要的方法是，解析完成的json数据，实际上是没有key的
+ * 表格在展示的时候需要key对应上，value才会在表格里显示，所以需要调方法处理一下
+ */</span>
+<span class="token keyword">const</span> <span class="token function-variable function">beforeUpload</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">file</span><span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>file<span class="token punctuation">.</span>size <span class="token operator">/</span> <span class="token constant">ONE_M_TO_BYTES</span> <span class="token operator">&gt;</span> <span class="token constant">MAX_FILE_SIZE</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    message<span class="token punctuation">.</span><span class="token function">warning</span><span class="token punctuation">(</span><span class="token string">'请上传小于10M的文件！'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span>
+
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">const</span> f <span class="token operator">=</span> file<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> reader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileReader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    reader<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> datas <span class="token operator">=</span> e<span class="token operator">?.</span>target<span class="token operator">?.</span>result<span class="token punctuation">;</span>
+      <span class="token comment">// 解析datas</span>
+      <span class="token keyword">const</span> workbook <span class="token operator">=</span> <span class="token constant">XLSX</span><span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>datas<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'binary'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 是工作簿中的工作表的有序列表</span>
+      <span class="token keyword">const</span> first_worksheet <span class="token operator">=</span> workbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">[</span>workbook<span class="token punctuation">.</span>SheetNames<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token comment">// 将工作簿对象转换为JSON对象数组</span>
+      <span class="token keyword">const</span> jsonArr <span class="token operator">=</span> <span class="token constant">XLSX</span><span class="token punctuation">.</span>utils<span class="token punctuation">.</span><span class="token function">sheet_to_json</span><span class="token punctuation">(</span>first_worksheet<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">header</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token function">handleImpotedJson</span><span class="token punctuation">(</span>jsonArr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    reader<span class="token punctuation">.</span><span class="token function">readAsBinaryString</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 在事件监听文件的change的回调函数中，获取到文件对象之后调用方法来将excel数据解析为json</span>
+<span class="token keyword">const</span> <span class="token function-variable function">handleUpload</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">beforeUpload</span><span class="token punctuation">(</span>uploadInput<span class="token operator">?.</span>current<span class="token operator">?.</span>files<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 点击按钮的时候，触发input的上传click事件</span>
+<span class="token keyword">const</span> <span class="token function-variable function">handleFakeUpload</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  uploadInput<span class="token operator">?.</span>current<span class="token operator">?.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>document<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+      * 监听input上传事件 在得到文件流之后 把input的ref回传到父组件
+      * 并且解析文件转为json来在表格里显示
+      */</span>
+    document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">[name=uploadExcel]</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'change'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>event<span class="token operator">?.</span>target <span class="token operator">&amp;&amp;</span> event<span class="token operator">?.</span>target<span class="token operator">?.</span>files<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        handleFileInputRefs <span class="token operator">&amp;&amp;</span> <span class="token function">handleFileInputRefs</span><span class="token punctuation">(</span>uploadInput<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">handleUpload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">return</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fix-input-button<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>file<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>uploadExcel<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ref</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>uploadInput<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span> <span class="token attr-name">icon</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Iconfont</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>iconshangchuan<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">}</span></span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleFakeUpload<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      上传
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</code></pre></div><p>父组件</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token comment">// uploadRefs 是useState定义的保存ref的变量</span>
+
+<span class="token keyword">const</span> formData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FormData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+formData<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'fileStream'</span><span class="token punctuation">,</span> uploadRefs<span class="token operator">?.</span>current<span class="token operator">?.</span>files<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 接口还需要一些别的参数</span>
+formData<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'connectBusiness'</span><span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>connectBusiness<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/**
+  * 这里不能设置请求头
+  * 浏览器检测到后自己加上 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryXXXx 这样
+  */</span>
+<span class="token function">setIsLoading</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'/api/appName/parseExcelUpload'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">'post'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">body</span><span class="token operator">:</span> formData<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'err'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">finally</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setIsLoading</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="node-层"><a href="#node-层" class="header-anchor">#</a> <code>node</code> 层</h3> <p><code>node</code> 用的是 <code>thinkjs</code>，<code>controller</code> 其实很简单，包装一下然后请求真正的接口避免直接调接口跨域</p> <p>伪代码：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> Base <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../base'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> request <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'request'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token constant">UPLOAD_SERVICE</span> <span class="token operator">=</span> <span class="token string">'http://xxx'</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token class-name">extends</span> Base <span class="token punctuation">{</span>
+
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">async</span> <span class="token function">parseExcelUploadAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">// 获取文件信息</span>
+    <span class="token keyword">const</span> files <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">file</span><span class="token punctuation">(</span><span class="token string">'fileStream'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 利用request发起请求</span>
+    <span class="token keyword">var</span> req <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token constant">UPLOAD_SERVICE</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> resp<span class="token punctuation">,</span> body</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          <span class="token literal-property property">status</span><span class="token operator">:</span> <span class="token string">'failed'</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">msg</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">上传失败，url:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">UPLOAD_SERVICE</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          <span class="token literal-property property">status</span><span class="token operator">:</span> <span class="token string">'success'</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">data</span><span class="token operator">:</span> body
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'返回请求'</span> <span class="token operator">+</span> body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">var</span> form <span class="token operator">=</span> req<span class="token punctuation">.</span><span class="token function">form</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// request上传文件的时候需要append一些stream和string</span>
+    <span class="token comment">// node也会自己获取前端上传发起请求的头 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryXXXx</span>
+    form<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'file'</span><span class="token punctuation">,</span> fs<span class="token punctuation">.</span><span class="token function">createReadStream</span><span class="token punctuation">(</span>files<span class="token punctuation">.</span>path<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">filename</span><span class="token operator">:</span> files<span class="token punctuation">.</span>name<span class="token punctuation">,</span>
+      <span class="token literal-property property">contentType</span><span class="token operator">:</span> <span class="token string">'application/vnd.ms-excel'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    form<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'connectBusiness'</span><span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'connectBusiness'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>至此通过 <code>node</code> 中间层来上传的一个功能实现了。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">2/12/2023, 7:42:22 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/notes/react/umi-use-iconfont.html" class="prev">
+        umi 中使用 iconfont
+      </a></span> <span class="next"><a href="/blog/notes/react/use-context.html">
+        跨深组件传递数据和调用方法
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.f8d55777.js" defer></script><script src="/blog/assets/js/2.9875f188.js" defer></script><script src="/blog/assets/js/35.b4dbff7c.js" defer></script>
+  </body>
+</html>

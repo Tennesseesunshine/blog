@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>实现电话簿或者昵称分类功能 ☎️ | 某喵喵</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="简单记录、学习笔记">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.144fa934.css" as="style"><link rel="preload" href="/blog/assets/js/app.f8d55777.js" as="script"><link rel="preload" href="/blog/assets/js/2.9875f188.js" as="script"><link rel="preload" href="/blog/assets/js/26.77995ffd.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.12a746c0.js"><link rel="prefetch" href="/blog/assets/js/11.e589b28a.js"><link rel="prefetch" href="/blog/assets/js/12.d7f69a0d.js"><link rel="prefetch" href="/blog/assets/js/13.78ef516b.js"><link rel="prefetch" href="/blog/assets/js/14.890c0bbf.js"><link rel="prefetch" href="/blog/assets/js/15.2ded1311.js"><link rel="prefetch" href="/blog/assets/js/16.76fb416d.js"><link rel="prefetch" href="/blog/assets/js/17.9b70c6a6.js"><link rel="prefetch" href="/blog/assets/js/18.eac3edd8.js"><link rel="prefetch" href="/blog/assets/js/19.15ea688e.js"><link rel="prefetch" href="/blog/assets/js/20.f4f2564b.js"><link rel="prefetch" href="/blog/assets/js/21.c8cf4362.js"><link rel="prefetch" href="/blog/assets/js/22.56e6986d.js"><link rel="prefetch" href="/blog/assets/js/23.a5565786.js"><link rel="prefetch" href="/blog/assets/js/24.ef7d6995.js"><link rel="prefetch" href="/blog/assets/js/25.a9c02ac5.js"><link rel="prefetch" href="/blog/assets/js/27.0373c9dc.js"><link rel="prefetch" href="/blog/assets/js/28.186384fd.js"><link rel="prefetch" href="/blog/assets/js/29.fb7b2b82.js"><link rel="prefetch" href="/blog/assets/js/3.446fcee1.js"><link rel="prefetch" href="/blog/assets/js/30.65274b10.js"><link rel="prefetch" href="/blog/assets/js/31.55b2efaa.js"><link rel="prefetch" href="/blog/assets/js/32.977599e7.js"><link rel="prefetch" href="/blog/assets/js/33.2ba845ff.js"><link rel="prefetch" href="/blog/assets/js/34.4e23bcaf.js"><link rel="prefetch" href="/blog/assets/js/35.b4dbff7c.js"><link rel="prefetch" href="/blog/assets/js/36.892623ef.js"><link rel="prefetch" href="/blog/assets/js/37.20db8c90.js"><link rel="prefetch" href="/blog/assets/js/38.f65dc72f.js"><link rel="prefetch" href="/blog/assets/js/39.95de0fa6.js"><link rel="prefetch" href="/blog/assets/js/4.48c34b70.js"><link rel="prefetch" href="/blog/assets/js/40.72a20d87.js"><link rel="prefetch" href="/blog/assets/js/41.68381aaa.js"><link rel="prefetch" href="/blog/assets/js/42.d4e1858e.js"><link rel="prefetch" href="/blog/assets/js/43.7380438e.js"><link rel="prefetch" href="/blog/assets/js/44.3344524d.js"><link rel="prefetch" href="/blog/assets/js/45.68e0ee32.js"><link rel="prefetch" href="/blog/assets/js/46.8f702e0b.js"><link rel="prefetch" href="/blog/assets/js/47.988df742.js"><link rel="prefetch" href="/blog/assets/js/5.b6391433.js"><link rel="prefetch" href="/blog/assets/js/6.66f56766.js"><link rel="prefetch" href="/blog/assets/js/7.b9c34bfd.js"><link rel="prefetch" href="/blog/assets/js/8.47ce4284.js"><link rel="prefetch" href="/blog/assets/js/9.c9ac39cc.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.144fa934.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/assets/images/icon.jpeg" alt="某喵喵" class="logo"> <span class="site-name can-hide">某喵喵</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/notes/linux/shell-export-var-to-nodejs.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/vue/concis-event-bus.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/react/call-child-component-method.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/javascript/promise-resolve-and-return.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/network/" class="nav-link">
+  网络
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/browser/anchor-setting.html" class="nav-link">
+  浏览器相关
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程效率、设计方案" class="dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="工程效率、设计方案" class="mobile-dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/design/offline/" class="nav-link">
+  离线包
+</a></li><li class="dropdown-item"><!----> <a href="/blog/design/devops/gitlab-ci.html" class="nav-link">
+  DevOps
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具使用" class="dropdown-title"><span class="title">工具使用</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具使用" class="mobile-dropdown-title"><span class="title">工具使用</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/charles/" class="nav-link">
+  charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/github/github-actions.html" class="nav-link">
+  github
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/webpack/md-to-html-loader.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Tennesseesunshine" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/notes/linux/shell-export-var-to-nodejs.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/vue/concis-event-bus.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/react/call-child-component-method.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/javascript/promise-resolve-and-return.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/network/" class="nav-link">
+  网络
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/browser/anchor-setting.html" class="nav-link">
+  浏览器相关
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程效率、设计方案" class="dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="工程效率、设计方案" class="mobile-dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/design/offline/" class="nav-link">
+  离线包
+</a></li><li class="dropdown-item"><!----> <a href="/blog/design/devops/gitlab-ci.html" class="nav-link">
+  DevOps
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具使用" class="dropdown-title"><span class="title">工具使用</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具使用" class="mobile-dropdown-title"><span class="title">工具使用</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/charles/" class="nav-link">
+  charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/github/github-actions.html" class="nav-link">
+  github
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/webpack/md-to-html-loader.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Tennesseesunshine" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/notes/javascript/promise-resolve-and-return.html" class="sidebar-link">Promise 中 resolve 和 return</a></li><li><a href="/blog/notes/javascript/read-mini-reg-exp-book.html" class="sidebar-link">读正则迷你书总结 📓</a></li><li><a href="/blog/notes/javascript/reduce.html" class="sidebar-link">reduce高级函数应用</a></li><li><a href="/blog/notes/javascript/lazy-load.html" class="sidebar-link">图片懒加载</a></li><li><a href="/blog/notes/javascript/my-promiseAll-and-promiseRace.html" class="sidebar-link">Promise.all 和 Promise.race 实现</a></li><li><a href="/blog/notes/javascript/pipe-compose.html" class="sidebar-link">pipe 和 compose 函数</a></li><li><a href="/blog/notes/javascript/new-instanceof.html" class="sidebar-link">实现 new 和 instanceof</a></li><li><a href="/blog/notes/javascript/sort-by-ASCII.html" aria-current="page" class="active sidebar-link">实现电话簿或者昵称分类功能 ☎️</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/notes/javascript/sort-by-ASCII.html#原始数据" class="sidebar-link">原始数据</a></li><li class="sidebar-sub-header"><a href="/blog/notes/javascript/sort-by-ASCII.html#目标数据" class="sidebar-link">目标数据</a></li><li class="sidebar-sub-header"><a href="/blog/notes/javascript/sort-by-ASCII.html#实现" class="sidebar-link">实现</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>最近有一个挺有意思的小需求，有一组词的分类需要按照拼音归类且排序，基本类似于电话薄按照英文字母排序的功能。</p> <p>假如后端给出的数据是</p> <h2 id="原始数据"><a href="#原始数据" class="header-anchor">#</a> 原始数据</h2> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;tag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;感动&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;pinyin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;gan dong&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;tag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;爱国&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;pinyin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ai guo&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;tag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;感动中国&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;pinyin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;gan dong zhong guo&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;tag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;富强&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;pinyin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fu qiang&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p>最终需要将数据转为</p> <h2 id="目标数据"><a href="#目标数据" class="header-anchor">#</a> 目标数据</h2> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;letter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;a&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;爱国&quot;</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;letter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;f&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;富强&quot;</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;letter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;g&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;感动&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;感动中国&quot;</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p>实现思路，可以借助 <code>Map</code> 的属性，先查看当前的数据是否已经被推入 <code>data</code> 中，如果已经被推入则需要更新，否则直接 <code>push</code> 到 <code>data</code> 中，并且跟新 <code>Map</code> 的状态。</p> <h2 id="实现"><a href="#实现" class="header-anchor">#</a> 实现</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">type</span> <span class="token class-name">tagsTypes</span> <span class="token operator">=</span> <span class="token string">'tag'</span> <span class="token operator">|</span> <span class="token string">'pinyin'</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">IResult</span> <span class="token punctuation">{</span>
+  letter<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  data<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">pySegSort</span> <span class="token operator">=</span> <span class="token punctuation">(</span>arr<span class="token operator">:</span> Record<span class="token operator">&lt;</span>tagsTypes<span class="token punctuation">,</span> <span class="token builtin">string</span><span class="token operator">&gt;</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> wordsMap<span class="token operator">:</span> Map<span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token builtin">boolean</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> moreWords<span class="token operator">:</span> IResult<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 取首字母</span>
+    <span class="token keyword">const</span> initials <span class="token operator">=</span> item<span class="token punctuation">.</span>pinyin<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 若Map中不存在，直接push，并且更新状态</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>wordsMap<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>initials<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      moreWords<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        letter<span class="token operator">:</span> initials<span class="token punctuation">,</span>
+        data<span class="token operator">:</span> <span class="token punctuation">[</span>item<span class="token punctuation">.</span>tag<span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      wordsMap<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>initials<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 否则就寻找去拼接</span>
+      moreWords<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>letter <span class="token operator">===</span> initials<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          e<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>e<span class="token punctuation">.</span>data<span class="token punctuation">,</span> item<span class="token punctuation">.</span>tag<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 最终取数据的首字母的ASCII码排序</span>
+  <span class="token keyword">return</span> moreWords<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> a<span class="token punctuation">.</span>letter<span class="token punctuation">.</span><span class="token function">charCodeAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">-</span> b<span class="token punctuation">.</span>letter<span class="token punctuation">.</span><span class="token function">charCodeAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">2/12/2023, 7:42:22 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/notes/javascript/new-instanceof.html" class="prev">
+        实现 new 和 instanceof
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.f8d55777.js" defer></script><script src="/blog/assets/js/2.9875f188.js" defer></script><script src="/blog/assets/js/26.77995ffd.js" defer></script>
+  </body>
+</html>

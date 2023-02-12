@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TypeScript 工具类型使用总结 | 某喵喵</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="简单记录、学习笔记">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.144fa934.css" as="style"><link rel="preload" href="/blog/assets/js/app.f8d55777.js" as="script"><link rel="preload" href="/blog/assets/js/2.9875f188.js" as="script"><link rel="preload" href="/blog/assets/js/39.95de0fa6.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.12a746c0.js"><link rel="prefetch" href="/blog/assets/js/11.e589b28a.js"><link rel="prefetch" href="/blog/assets/js/12.d7f69a0d.js"><link rel="prefetch" href="/blog/assets/js/13.78ef516b.js"><link rel="prefetch" href="/blog/assets/js/14.890c0bbf.js"><link rel="prefetch" href="/blog/assets/js/15.2ded1311.js"><link rel="prefetch" href="/blog/assets/js/16.76fb416d.js"><link rel="prefetch" href="/blog/assets/js/17.9b70c6a6.js"><link rel="prefetch" href="/blog/assets/js/18.eac3edd8.js"><link rel="prefetch" href="/blog/assets/js/19.15ea688e.js"><link rel="prefetch" href="/blog/assets/js/20.f4f2564b.js"><link rel="prefetch" href="/blog/assets/js/21.c8cf4362.js"><link rel="prefetch" href="/blog/assets/js/22.56e6986d.js"><link rel="prefetch" href="/blog/assets/js/23.a5565786.js"><link rel="prefetch" href="/blog/assets/js/24.ef7d6995.js"><link rel="prefetch" href="/blog/assets/js/25.a9c02ac5.js"><link rel="prefetch" href="/blog/assets/js/26.77995ffd.js"><link rel="prefetch" href="/blog/assets/js/27.0373c9dc.js"><link rel="prefetch" href="/blog/assets/js/28.186384fd.js"><link rel="prefetch" href="/blog/assets/js/29.fb7b2b82.js"><link rel="prefetch" href="/blog/assets/js/3.446fcee1.js"><link rel="prefetch" href="/blog/assets/js/30.65274b10.js"><link rel="prefetch" href="/blog/assets/js/31.55b2efaa.js"><link rel="prefetch" href="/blog/assets/js/32.977599e7.js"><link rel="prefetch" href="/blog/assets/js/33.2ba845ff.js"><link rel="prefetch" href="/blog/assets/js/34.4e23bcaf.js"><link rel="prefetch" href="/blog/assets/js/35.b4dbff7c.js"><link rel="prefetch" href="/blog/assets/js/36.892623ef.js"><link rel="prefetch" href="/blog/assets/js/37.20db8c90.js"><link rel="prefetch" href="/blog/assets/js/38.f65dc72f.js"><link rel="prefetch" href="/blog/assets/js/4.48c34b70.js"><link rel="prefetch" href="/blog/assets/js/40.72a20d87.js"><link rel="prefetch" href="/blog/assets/js/41.68381aaa.js"><link rel="prefetch" href="/blog/assets/js/42.d4e1858e.js"><link rel="prefetch" href="/blog/assets/js/43.7380438e.js"><link rel="prefetch" href="/blog/assets/js/44.3344524d.js"><link rel="prefetch" href="/blog/assets/js/45.68e0ee32.js"><link rel="prefetch" href="/blog/assets/js/46.8f702e0b.js"><link rel="prefetch" href="/blog/assets/js/47.988df742.js"><link rel="prefetch" href="/blog/assets/js/5.b6391433.js"><link rel="prefetch" href="/blog/assets/js/6.66f56766.js"><link rel="prefetch" href="/blog/assets/js/7.b9c34bfd.js"><link rel="prefetch" href="/blog/assets/js/8.47ce4284.js"><link rel="prefetch" href="/blog/assets/js/9.c9ac39cc.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.144fa934.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/assets/images/icon.jpeg" alt="某喵喵" class="logo"> <span class="site-name can-hide">某喵喵</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/notes/linux/shell-export-var-to-nodejs.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/vue/concis-event-bus.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/react/call-child-component-method.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/javascript/promise-resolve-and-return.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/network/" class="nav-link">
+  网络
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/browser/anchor-setting.html" class="nav-link">
+  浏览器相关
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程效率、设计方案" class="dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="工程效率、设计方案" class="mobile-dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/design/offline/" class="nav-link">
+  离线包
+</a></li><li class="dropdown-item"><!----> <a href="/blog/design/devops/gitlab-ci.html" class="nav-link">
+  DevOps
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具使用" class="dropdown-title"><span class="title">工具使用</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具使用" class="mobile-dropdown-title"><span class="title">工具使用</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/charles/" class="nav-link">
+  charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/github/github-actions.html" class="nav-link">
+  github
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/webpack/md-to-html-loader.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Tennesseesunshine" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/notes/linux/shell-export-var-to-nodejs.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/vue/concis-event-bus.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/react/call-child-component-method.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/javascript/promise-resolve-and-return.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/network/" class="nav-link">
+  网络
+</a></li><li class="dropdown-item"><!----> <a href="/blog/notes/browser/anchor-setting.html" class="nav-link">
+  浏览器相关
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程效率、设计方案" class="dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="工程效率、设计方案" class="mobile-dropdown-title"><span class="title">工程效率、设计方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/design/offline/" class="nav-link">
+  离线包
+</a></li><li class="dropdown-item"><!----> <a href="/blog/design/devops/gitlab-ci.html" class="nav-link">
+  DevOps
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具使用" class="dropdown-title"><span class="title">工具使用</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具使用" class="mobile-dropdown-title"><span class="title">工具使用</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/charles/" class="nav-link">
+  charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/github/github-actions.html" class="nav-link">
+  github
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/webpack/md-to-html-loader.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Tennesseesunshine" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/notes/vue/concis-event-bus.html" class="sidebar-link">EventBus</a></li><li><a href="/blog/notes/vue/px-to-vw.html" class="sidebar-link">移动端适配解决方案</a></li><li><a href="/blog/notes/vue/typeScript-use.html" aria-current="page" class="active sidebar-link">TypeScript 工具类型使用总结</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/notes/vue/vue-version.html" class="sidebar-link">Vue 2.X 两个不同的版本</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">interface</span> <span class="token class-name">IMyInfo</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token builtin">string</span>
+  age<span class="token operator">:</span> <span class="token builtin">number</span>
+  address<span class="token operator">:</span> <span class="token builtin">string</span>
+  money<span class="token operator">:</span> <span class="token builtin">number</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> <span class="token class-name">BasicSelect</span> <span class="token operator">=</span> <span class="token string">'name'</span> <span class="token operator">|</span> <span class="token string">'age'</span>
+</code></pre></div><h3 id="keyof"><a href="#keyof" class="header-anchor">#</a> <code>keyof</code></h3> <ul><li>该操作符可以用于获取某种类型的所有键，其返回类型是联合类型。</li> <li>例如：</li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">type</span> <span class="token class-name">koT</span> <span class="token operator">=</span> <span class="token keyword">keyof</span> IMyInfo
+
+<span class="token comment">// type koT = &quot;name&quot; | &quot;age&quot; | &quot;address&quot; | &quot;money&quot;</span>
+</code></pre></div><h3 id="typeof"><a href="#typeof" class="header-anchor">#</a> <code>typeof</code></h3> <ul><li><code>typeof</code> 操作符可以用来获取一个变量声明或对象的类型</li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">type</span> <span class="token class-name">naBasicT</span> <span class="token operator">=</span> <span class="token string">'name'</span> <span class="token operator">|</span> <span class="token string">'age'</span>
+
+<span class="token comment">// 从T中选择出K的类型作为当前变量的类型</span>
+<span class="token keyword">const</span> naData<span class="token operator">:</span> Pick<span class="token operator">&lt;</span>IMyInfo<span class="token punctuation">,</span> naBasicT<span class="token operator">&gt;</span>  <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'sss'</span><span class="token punctuation">,</span>
+  age<span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> <span class="token class-name">naT</span> <span class="token operator">=</span> <span class="token keyword">typeof</span> naData
+
+<span class="token comment">// 等价于 </span>
+<span class="token comment">// type naT = {</span>
+<span class="token comment">//   name: string;</span>
+<span class="token comment">//   age: number;</span>
+<span class="token comment">// }</span>
+</code></pre></div><h3 id="in"><a href="#in" class="header-anchor">#</a> <code>in</code></h3> <ul><li>遍历枚举类型或判断在不在某一个类型中</li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">type</span> <span class="token class-name">Keys</span> <span class="token operator">=</span> <span class="token string">&quot;a&quot;</span> <span class="token operator">|</span> <span class="token string">&quot;b&quot;</span> <span class="token operator">|</span> <span class="token string">&quot;c&quot;</span>
+
+<span class="token keyword">type</span> <span class="token class-name">Obj</span> <span class="token operator">=</span>  <span class="token punctuation">{</span>
+  <span class="token punctuation">[</span><span class="token constant">P</span> <span class="token keyword">in</span> Keys<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// { a: string, b: string, c: string }</span>
+
+</code></pre></div><h3 id="extends"><a href="#extends" class="header-anchor">#</a> <code>extends</code></h3> <ul><li>理解为约束比较好</li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">type</span> <span class="token class-name">Len</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  length<span class="token operator">:</span> <span class="token builtin">number</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 利用Len类型来约束T使其具有length的类型</span>
+<span class="token keyword">function</span> <span class="token generic-function"><span class="token function">getLen</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token keyword">extends</span> Len<span class="token operator">&gt;</span></span></span> <span class="token punctuation">(</span>arg<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> arg<span class="token punctuation">.</span>length
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="pick"><a href="#pick" class="header-anchor">#</a> <code>Pick</code></h3> <ul><li><code>Pick&lt;T, K&gt;</code> <code>K</code>可以是一个联合类型 从泛型<code>T</code>中过滤出<code>K</code>联合的类型，第一个参数是基准，第二个参数是需要选择出来的类型的联合，或者单个类型</li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">type</span> <span class="token class-name">pickT</span> <span class="token operator">=</span> Pick<span class="token operator">&lt;</span>IMyInfo<span class="token punctuation">,</span> BasicSelect<span class="token operator">&gt;</span>
+
+<span class="token comment">// 等价于 type nameT = {</span>
+<span class="token comment">//   name: string;</span>
+<span class="token comment">//   age: number;</span>
+<span class="token comment">// }</span>
+</code></pre></div><h3 id="partial"><a href="#partial" class="header-anchor">#</a> <code>Partial</code></h3> <ul><li><code>Partial&lt;T&gt;</code> 将<code>T</code>都变为可选类型</li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">type</span> <span class="token class-name">partialT</span> <span class="token operator">=</span> Partial<span class="token operator">&lt;</span>IMyInfo<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="required"><a href="#required" class="header-anchor">#</a> <code>Required</code></h3> <ul><li><code>Required&lt;T&gt;</code> 将传入的泛型变为必选项</li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">type</span> <span class="token class-name">requiredT</span> <span class="token operator">=</span> Required<span class="token operator">&lt;</span>partialT<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="readonly"><a href="#readonly" class="header-anchor">#</a> <code>Readonly</code></h3> <ul><li><code>Readonly&lt;T&gt;</code> 将泛型变为 <code>readonly</code></li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">type</span> <span class="token class-name">readonlyT</span> <span class="token operator">=</span> Readonly<span class="token operator">&lt;</span>IMyInfo<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="record"><a href="#record" class="header-anchor">#</a> <code>Record</code></h3> <ul><li><code>Record&lt;K, T&gt;</code> 将<code>T</code>的类型赋给每一个<code>K</code></li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">type</span> <span class="token class-name">recodeT</span> <span class="token operator">=</span> Record<span class="token operator">&lt;</span>BasicSelect<span class="token punctuation">,</span> IMyInfo<span class="token operator">&gt;</span>
+
+<span class="token comment">// 等价于</span>
+<span class="token comment">// type recodeT = {</span>
+<span class="token comment">//   name: IMyInfo;</span>
+<span class="token comment">//   age: IMyInfo;</span>
+<span class="token comment">// }</span>
+</code></pre></div><h3 id="exclude、extract"><a href="#exclude、extract" class="header-anchor">#</a> <code>Exclude</code>、<code>Extract</code></h3> <ul><li><code>Exclude&lt;T, U&gt;</code> 其中 <code>T</code>，<code>U</code> 比较，排除<code>U</code>和<code>T</code>中共有，返回<code>T</code>中剩下的 返回的是第一个泛型 第一个作为基准</li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">type</span> <span class="token class-name"><span class="token constant">T1</span></span> <span class="token operator">=</span> <span class="token string">'a'</span> <span class="token operator">|</span> <span class="token string">'b'</span> <span class="token operator">|</span> <span class="token string">'c'</span> <span class="token operator">|</span> <span class="token string">'m'</span>
+<span class="token keyword">type</span> <span class="token class-name"><span class="token constant">T2</span></span> <span class="token operator">=</span> <span class="token string">'b'</span> <span class="token operator">|</span> <span class="token string">'c'</span> <span class="token operator">|</span> <span class="token string">'d'</span>
+
+<span class="token keyword">type</span> <span class="token class-name">excludeT</span> <span class="token operator">=</span> Exclude<span class="token operator">&lt;</span><span class="token constant">T1</span><span class="token punctuation">,</span> <span class="token constant">T2</span><span class="token operator">&gt;</span>
+<span class="token comment">// 等价于 type excludeT = &quot;a&quot;</span>
+
+<span class="token keyword">type</span> <span class="token class-name">extractT</span> <span class="token operator">=</span> Extract<span class="token operator">&lt;</span><span class="token constant">T1</span><span class="token punctuation">,</span> <span class="token constant">T2</span><span class="token operator">&gt;</span>
+<span class="token comment">// 等价于 type extractT = &quot;b&quot; | &quot;c&quot;</span>
+</code></pre></div><h3 id="omit"><a href="#omit" class="header-anchor">#</a> <code>Omit</code></h3> <ul><li><code>Omit&lt;T, K&gt;</code> 跟<code>Pick</code>类似，但是功能相反 从<code>T</code>中排除掉<code>K</code>的类型</li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">type</span> <span class="token class-name">omitT</span> <span class="token operator">=</span> Omit<span class="token operator">&lt;</span>IMyInfo<span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token operator">&gt;</span>
+
+<span class="token comment">// 等价于</span>
+<span class="token comment">// type omitT = {</span>
+<span class="token comment">//   name: string;</span>
+<span class="token comment">//   address: string;</span>
+<span class="token comment">//   money: number;</span>
+<span class="token comment">// }</span>
+</code></pre></div><h3 id="returntype"><a href="#returntype" class="header-anchor">#</a> <code>ReturnType</code></h3> <ul><li>从函数的返回值中提取类型</li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">function</span> <span class="token function">userinfo</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    age<span class="token operator">:</span> <span class="token number">25</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'jack'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> <span class="token class-name">ObjT</span> <span class="token operator">=</span> ReturnType<span class="token operator">&lt;</span><span class="token keyword">typeof</span> userinfo<span class="token operator">&gt;</span>
+
+<span class="token comment">// 等同于 type ObjT = {</span>
+<span class="token comment">//   age: number;</span>
+<span class="token comment">//   name: string;</span>
+<span class="token comment">// }</span>
+</code></pre></div><h3 id="parameters"><a href="#parameters" class="header-anchor">#</a> <code>Parameters</code></h3> <ul><li>从函数的参数中提取出需要的类型</li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// 定义的参数类型是 string, number</span>
+<span class="token keyword">type</span> <span class="token class-name">fnT</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> age<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    breif<span class="token operator">:</span> <span class="token builtin">string</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> <span class="token class-name">TParams</span> <span class="token operator">=</span> Parameters<span class="token operator">&lt;</span>fnT<span class="token operator">&gt;</span>
+<span class="token comment">// type TParams = [string, number]</span>
+
+<span class="token keyword">function</span> <span class="token function">getInfo</span> <span class="token punctuation">(</span>name<span class="token operator">:</span> TParams<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> age<span class="token operator">:</span> TParams<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">2/12/2023, 7:42:22 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/notes/vue/px-to-vw.html" class="prev">
+        移动端适配解决方案
+      </a></span> <span class="next"><a href="/blog/notes/vue/vue-version.html">
+        Vue 2.X 两个不同的版本
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.f8d55777.js" defer></script><script src="/blog/assets/js/2.9875f188.js" defer></script><script src="/blog/assets/js/39.95de0fa6.js" defer></script>
+  </body>
+</html>
