@@ -7,8 +7,8 @@ module.exports = {
     ],
     base: process.env.NODE_ENV === 'development' ? '/' : '/blog/',
     description: '简单记录、学习笔记',
-    sidebarDepth: 3,
     themeConfig: {
+        sidebarDepth: 3,
         lastUpdated: '最后更新',
         logo: '/assets/images/icon.jpeg',
         nav: [
@@ -58,7 +58,7 @@ module.exports = {
                     },
                     {
                         text: 'DevOps',
-                        link: '/design/devops/'
+                        link: '/design/devops/gitlab-ci'
                     },
                 ]
             },
@@ -96,26 +96,58 @@ module.exports = {
             ],
             '/notes/node/': [],
             '/notes/vue/': [
-                'concis-event-bus'
+                'concis-event-bus',
+                'px-to-vw',
+                'typeScript-use',
+                'vue-version'
             ],
             '/notes/react/': [
-                'call-child-component-method'
-            ],
-            '/notes/browser/': [
-                'anchor-setting',
-                'browser-download'
+                'call-child-component-method',
+                'umi-use-iconfont',
+                'upload-file',
+                'use-context'
             ],
             '/notes/javascript/': [
                 'promise-resolve-and-return',
                 'read-mini-reg-exp-book',
-                'reduce'
+                'reduce',
+                'lazy-load',
+                'my-promiseAll-and-promiseRace',
+                'pipe-compose',
+                'new-instanceof',
+                'sort-by-ASCII'
+            ],
+            '/notes/network/': [
+                {
+                    title: '子网划分',
+                    collapsable: false,
+                    children: ['', 'sub-network'],
+                }
+            ],
+            '/notes/browser/': [
+                'anchor-setting',
+                'browser-download',
+                'event-loop',
+                'http-cache',
+                'http2-notes',
+                'web-browser-export-file',
+                'web-performance',
+                'website-realize-pwa'
+            ],
+            '/design/devops/': [
+                'gitlab-ci'
+            ],
+            '/design/offline/': [
+                ''
             ],
             '/tools/github/': [
                 'github-actions'
             ],
             '/tools/webpack/': [
                 'md-to-html-loader',
-                'md-to-html-loader-optimization'
+                'md-to-html-loader-optimization',
+                'replace-moment-to-dayjs',
+                'webpack-dynamic-load-hmr'
             ],
         }
     }

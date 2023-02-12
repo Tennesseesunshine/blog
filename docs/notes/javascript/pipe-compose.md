@@ -1,12 +1,12 @@
 ---
-title: pipe 和 compose 在 JavaScript 中的应用
+title: pipe 和 compose 函数
 date: 2021-01-17 20:46:37
 tags: JavaScript
 ---
 
 函数式编程的中从左往右的 `pipe` 函数和从右往左的 `compose` 函数，在 `js` 中的一些应用场景。
 
-### pipe
+## pipe
 
 也称为管道函数，它接受 `n` 多个函数，依次从左往右执行，用最后一个函数作为最终的输出。用于改善函数嵌套调用，一个简单的示例：
 
@@ -30,11 +30,17 @@ end(second(first(`hi～我来了！💐`)))
 
 其实能看到 `end(second(first()))`这么调用嵌套不直观，我们用`reduce`实现管道 `pipe` 依次调用。
 
+优化之后的结果：
+
 ```js
 const pipe = (...arg) => result => arg.reduce((res, callback) => callback(res), result)
 ```
 
-调用 `pipe(first, second, end)('hi ～我来了！💐')`，会将参数先传递给 `first`，然后处理成功之后，再将结果作为 `second` 的参数，传递，`second` 处理完成之后，将结果作为 `end` 函数的参数，在 `end` 函数处理完成之后，将所有结果返回。最终 `pipe` 函数调用的结果，将会上边函数嵌套执行的结果一致。
+调用
+
+`pipe(first, second, end)('hi ～我来了！💐')`
+
+会将参数先传递给 `first`，然后处理成功之后，再将结果作为 `second` 的参数，传递，`second` 处理完成之后，将结果作为 `end` 函数的参数，在 `end` 函数处理完成之后，将所有结果返回。最终 `pipe` 函数调用的结果，将会上边函数嵌套执行的结果一致。
 
 ## compose
 

@@ -1,5 +1,5 @@
 ---
-title: Promise 中 resolve 和 return 的疑惑 ❓
+title: Promise 中 resolve 和 return
 date: 2021-06-13 12:03:27
 tags:
   - Promise
